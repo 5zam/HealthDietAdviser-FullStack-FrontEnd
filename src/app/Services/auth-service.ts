@@ -71,4 +71,13 @@ export class authService {
       localStorage.removeItem('authToken');
       localStorage.removeItem('currentUser');
   }
+
+  //current user
+  getCurrentUser(): Observable<User | null> {
+    return this.currentUserSubject.asObservable();
+  }
+  getCurrentUserId(): number | null {
+    const currentUser = this.currentUserSubject.value;
+    return currentUser ? currentUser.id : null;
+  }
 }

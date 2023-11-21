@@ -1,15 +1,11 @@
-<div class="add-chronic-disease">
-    <h3>Add Chronic Disease</h3>
+<!-- add-chronic-disease.component.html -->
 
-    <form (ngSubmit)="addChronicDisease()" [formGroup]="addChronicDiseaseForm">
-        <label>Disease Name:</label>
-        <input
-            type="text"
-            formControlName="diseaseName"
-            placeholder="Disease Name..."
-        />
-        <!-- Add more form fields as needed -->
+<form (ngSubmit)="addChronicDisease()" [formGroup]="addChronicDiseaseForm">
+    <label>Disease Name:</label>
+    <input type="text" formControlName="diseaseName" placeholder="Enter disease name" />
+    <button type="submit" [disabled]="addChronicDiseaseForm.invalid">Add New Chronic Disease</button>
+</form>
 
-        <button type="submit" [disabled]="addChronicDiseaseForm.invalid">Add</button>
-    </form>
-</div>
+<app-display-chronic-diseases></app-display-chronic-diseases>
+
+

@@ -1,0 +1,33 @@
+
+
+
+<h1>Chronic Diseases</h1>
+<!-- <form (ngSubmit)="displayChronicDisease()" [formGroup]="displayChronicDiseaseForm"></form> -->
+<ul>
+  <li *ngFor="let disease of diseases">
+    {{ disease.diseaseName }}
+    <button (click)="deleteDisease(disease.diseaseId)">Delete</button>
+    <button [routerLink]="['/meals/add', disease.diseaseId]">Add Meal</button>
+  </li>
+</ul>
+
+<!-- <mat-tab-group>
+  <mat-tab label="Search Diseases">
+    <ng-template matTabContent>
+      <ul>
+        <li *ngFor="let disease of diseases">
+          {{ disease.diseaseName }}
+          <button (click)="deleteDisease(disease.diseaseId)">Delete</button>
+          <button [routerLink]="['/meals/add', disease.diseaseId]">Add Meal</button>
+        </li>
+      </ul>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Add Disease">
+    <ng-template matTabContent> -->
+      <!-- Add the form to add a new disease here -->
+    <!-- </ng-template>
+  </mat-tab>
+</mat-tab-group> -->
+
+

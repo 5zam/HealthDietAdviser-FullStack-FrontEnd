@@ -5,6 +5,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { AuthGuardService } from './Services/auth-guard-service';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AddChronicDiseaseComponent } from './Components/add-chronic-disease/add-chronic-disease.component';
+import { AddMealForDiseaseComponent } from './Components/add-meal-for-disease/add-meal-for-disease.component';
 
 
 const routes: Routes = [
@@ -32,9 +33,15 @@ const routes: Routes = [
     
   },
   // {
-  //   path: 'add-disease',
-  //   component: AddDiseaseComponent
+  //   path: 'diseases/:diseaseId', // Add a parameter for the selected disease
+  // component: AddMealComponent, 
+  // canActivate: [AuthGuardService], 
   // },
+  {
+    path: 'meals/add/:diseaseId',
+    component: AddMealForDiseaseComponent, 
+  },
+ 
 
 ];
 

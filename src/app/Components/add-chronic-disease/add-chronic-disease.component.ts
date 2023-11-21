@@ -1,7 +1,9 @@
 import { Component,EventEmitter, OnInit, Output } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ChronicDiseaseService } from 'src/app/Services/chronic-disease.service'; 
-import { ChronicDisease } from 'src/app/Models/ChronicDisease.model'; // Import your Chronic Disease model
+import { ChronicDisease } from 'src/app/Models/ChronicDisease.model';
+import { HttpErrorResponse } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-add-chronic-disease',
@@ -10,49 +12,59 @@ import { ChronicDisease } from 'src/app/Models/ChronicDisease.model'; // Import 
 })
 export class AddChronicDiseaseComponent implements OnInit {
 
-  @Output()
-  chronicDiseaseAddedEvent: EventEmitter<void>;
-
   addChronicDiseaseForm: FormGroup;
-  diseaseNameInput: FormControl;
 
-  constructor(private chronicDiseaseService: ChronicDiseaseService) {
-    this.diseaseNameInput = new FormControl('', [Validators.required]);
-    this.addChronicDiseaseForm = new FormGroup({
-      diseaseName: this.diseaseNameInput,
-      // Add more form controls for additional fields if needed
+  @Output() diseaseAdded: EventEmitter<void> = new EventEmitter<void>();
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private chronicDiseaseService: ChronicDiseaseService
+  ) {
+    this.addChronicDiseaseForm = this.formBuilder.group({
+      diseaseName: ['', Validators.required],
     });
+  }
 
-    this.chronicDiseaseAddedEvent = new EventEmitter<void>();
-  }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
   addChronicDisease(): void {
-    if (this.addChronicDiseaseForm.invalid) {
-      return;
+    
+    if (this.addChronicDiseaseForm.valid) {
+      const diseaseName = this.addChronicDiseaseForm.value.diseaseName;
+      // Add new Disease:
+      const newDisease: ChronicDisease = {
+        diseaseId: 0, // In the backend, auto-generates the ID (disease_id)
+        diseaseName: diseaseName,
+      };
+      
+
+      // Call the service to add the disease
+      this.chronicDiseaseService.addChronicDisease(newDisease).subscribe(
+        (response) => {
+          // Handle success
+          console.log('Disease added successfully:', response);
+          // Clear the form after adding
+          this.addChronicDiseaseForm.reset();
+          // Emit the event to notify parent component
+          this.diseaseAdded.emit();
+        },
+        (error) => {
+          // Handle error
+          console.error('Error adding disease:', error);
+        
+          if (error instanceof HttpErrorResponse) {
+            // Log status code and response body (if available)
+            console.error('Status Code:', error.status);
+            console.error('Response Body:', error.error);
+          }
+        }
+      );
     }
-  
-    const disease: ChronicDisease = new ChronicDisease(
-      null, // Set to null if the backend generates the ID
-      this.addChronicDiseaseForm.value.diseaseName,
-      // Add additional form field values here
-    );
-  
-    this.chronicDiseaseService.addChronicDisease(disease).subscribe({
-      next: () => {
-        // Reset the form
-        this.diseaseNameInput.setValue('');
-        // Reset other form controls if needed
-  
-        // Emit an event to notify the parent component
-        this.chronicDiseaseAddedEvent.emit();
-      },
-      error: (error: any) => { // Specify the type of the error parameter
-        console.log(error);
-      }
-    });
   }
-  
-}
+
+
+
+}//end of class
+
+
+
