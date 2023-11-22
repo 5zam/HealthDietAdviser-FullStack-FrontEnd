@@ -41,5 +41,9 @@ export class ChronicDiseaseService {
       return this.http.get<ChronicDisease[]>(url);
     }
 
-  
+    addSelectedChronicDiseaseToUser(userId: number, diseaseId: number): Observable<any> {
+      const url = `${this.API_URL}/add-selected-disease/${userId}/${diseaseId}`;
+      return this.http.post(url, null);
+    }
+    
 }

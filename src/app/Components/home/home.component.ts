@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
 
  navigateToDashboard() {
   // Use the router to navigate to the UserDashboardComponent
-  this.router.navigate(['/dashboard']);
+  this.router.navigate(['dashboard/:userId']);
 }
 
 }

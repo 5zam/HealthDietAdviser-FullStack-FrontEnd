@@ -1,6 +1,6 @@
 <!-- user-dashboard.component.html -->
 
-<div>
+<!-- <div>
   <h1>User Dashboard</h1>
   <h2>Select Chronic Diseases:</h2>
   <select [(ngModel)]="selectedDiseaseId" (change)="selectChronicDisease()">
@@ -15,6 +15,25 @@
       <button (click)="goToMeals(disease.diseaseId)">Go to Meals</button>
     </li>
   </ul>
+</div> -->
+
+
+<div>
+  <h1>User Dashboard</h1>
+  <h2>Select Chronic Diseases:</h2>
+  <select [(ngModel)]="selectedDiseaseId" (change)="selectChronicDisease()">
+    <option *ngFor="let disease of chronicDiseases" [value]="disease.diseaseId">{{ disease.diseaseName }}</option>
+  </select>
+  
+    <!-- Display selectedDiseaseId for debugging -->
+    <p>Selected Disease ID: {{ selectedDiseaseId }}</p>
+
+  <button (click)="addSelectedChronicDisease()">Add</button>
+
+  <h2>Selected Chronic Diseases:</h2>
+  <ul>
+    <li *ngFor="let disease of selectedChronicDiseases">
+      {{ disease.diseaseName }}
+    </li>
+  </ul>
 </div>
-
-

@@ -34,7 +34,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   { 
-    path: 'dashboard', 
+    path: 'dashboard/:userId', 
     component: UserDashboardComponent, 
     canActivate: [AuthGuardService], // Apply the AuthGuard to protect this route
   },

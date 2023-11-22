@@ -35,25 +35,23 @@ export class LoginComponent implements OnInit{
 
 
   login() {
-    // Attempt to login
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
       next: (response) => {
         console.log('Login successful');
-  
+    
         // Store user in local storage to keep user logged in between page refreshes
         localStorage.removeItem('authToken');
         localStorage.setItem('authToken', response.authToken);
-  
+    
         // Load user data
         this.authService.authenticate().subscribe({
           next: (userData: User) => {
             // Store user data in local storage
             localStorage.setItem('currentUser', JSON.stringify(userData));
             this.authService.currentUserSubject.next(userData);
-  
-            // Redirect to the return URL or home page
-            const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-            this.router.navigateByUrl(returnUrl);
+    
+            // Redirect to the dashboard with user ID
+            this.router.navigate(['/dashboard', userData.id]); // Pass the user ID as a parameter
           },
           error: error => {
             this.externalErrorMsg = 'Internal error please try again later';
@@ -62,7 +60,7 @@ export class LoginComponent implements OnInit{
       },
       error: error => {
         console.log(error, error.status)
-        if (error.status === 403) {
+        if(error.status === 403) {
           this.externalErrorMsg = 'Wrong username/password';
         }
       }
