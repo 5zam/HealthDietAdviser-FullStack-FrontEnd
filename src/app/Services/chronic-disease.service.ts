@@ -36,5 +36,10 @@ export class ChronicDiseaseService {
       return this.http.delete(`${this.API_URL}/delete/${id}`);
     }
 
+    getSelectedChronicDiseasesForUser(userId: number): Observable<ChronicDisease[]> {
+      const url = `${this.API_URL}/selected-diseases/${userId}`;
+      return this.http.get<ChronicDisease[]>(url);
+    }
+
   
 }

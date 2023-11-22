@@ -1,0 +1,11 @@
+<p>diet-prescription works!</p>
+<div *ngFor="let prescription of dietPrescriptions">
+    <div class="card">
+      <div class="card-header">{{ prescription.startDate }} - {{ prescription.endDate }}</div>
+      <div class="card-body">
+        <p><strong>User ID:</strong> {{ prescription.userId }}</p>
+        <p><strong>Disease ID:</strong> {{ prescription.diseaseId }}</p>
+        <p><strong>Meal IDs:</strong> {{ prescription.mealIds }}</p>
+      </div>
+    </div>
+  </div>

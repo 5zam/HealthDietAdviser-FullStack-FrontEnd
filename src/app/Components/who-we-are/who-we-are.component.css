@@ -1,0 +1,126 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+/* Navigation Bar */
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Login Section */
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login form {
+  margin-bottom: 20px;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.login .error-msg {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.login p {
+  text-align: center;
+}
+
+/* Who We Are Section */
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .description {
+  margin-bottom: 10px;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

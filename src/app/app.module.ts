@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { DisplayChronicDiseasesComponent } from './Components/display-chronic-di
 import { DeleteChronicDiseaseComponent } from './Components/delete-chronic-disease/delete-chronic-disease.component';
 import { AddMealForDiseaseComponent } from './Components/add-meal-for-disease/add-meal-for-disease.component'
 import { MatTabsModule } from '@angular/material/tabs';
+import { UserDashboardComponent } from './Components/user-dashboard/user-dashboard.component';
+import { DietPrescriptionComponent } from './Components/diet-prescription/diet-prescription.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +34,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     AddChronicDiseaseComponent,
     DisplayChronicDiseasesComponent,
     DeleteChronicDiseaseComponent,
-    AddMealForDiseaseComponent
+    AddMealForDiseaseComponent,
+    UserDashboardComponent,
+    DietPrescriptionComponent
    
     
   ],
@@ -42,7 +48,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,8 @@ import { AuthGuardService } from './Services/auth-guard-service';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AddChronicDiseaseComponent } from './Components/add-chronic-disease/add-chronic-disease.component';
 import { AddMealForDiseaseComponent } from './Components/add-meal-for-disease/add-meal-for-disease.component';
+import {WhoWeAreComponent} from './Components/who-we-are/who-we-are.component'
+import { UserDashboardComponent } from './Components/user-dashboard/user-dashboard.component';
 
 
 const routes: Routes = [
@@ -24,19 +26,18 @@ const routes: Routes = [
   },
   {
     path: 'who-we-are',
-    component: SignUpComponent
+    component: WhoWeAreComponent
   },
   {
     path: 'diseases',
     component: AddChronicDiseaseComponent,
     canActivate: [AuthGuardService],
-    
   },
-  // {
-  //   path: 'diseases/:diseaseId', // Add a parameter for the selected disease
-  // component: AddMealComponent, 
-  // canActivate: [AuthGuardService], 
-  // },
+  { 
+    path: 'dashboard', 
+    component: UserDashboardComponent, 
+    canActivate: [AuthGuardService], // Apply the AuthGuard to protect this route
+  },
   {
     path: 'meals/add/:diseaseId',
     component: AddMealForDiseaseComponent, 

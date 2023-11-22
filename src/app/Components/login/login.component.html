@@ -1,4 +1,4 @@
-<div class="login">
+<!-- <div class="login">
     <h1>Login</h1>
 
     <form (ngSubmit)="login()" [formGroup]="loginForm">
@@ -11,4 +11,48 @@
     <p class="error-msg">{{externalErrorMsg}}</p>
 
     <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
-</div>
+</div> -->
+
+<!-- <div class="app-container">
+    <app-nav-bar></app-nav-bar>
+    <header>
+        <div class="header-logo">
+          <img src="../../../assets/image/diet-health-advisor-logo.png" alt="Diet Health Advisor Logo" class="logo-image" />
+          <h3 class="title">Diet Health Advisor</h3>
+        </div>
+      </header>
+    <div class="login">
+   
+  
+      <h1>Login</h1>
+  
+      <form (ngSubmit)="login()" [formGroup]="loginForm">
+        <label>Email:</label>
+        <input type="email" placeholder="Email..." formControlName="email" />
+        <label>Password:</label>
+        <input type="password" placeholder="Password..." formControlName="password" />
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+      </form>
+      <p class="error-msg">{{externalErrorMsg}}</p>
+  
+      <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
+    </div>
+  </div> -->
+
+  
+
+
+
+  
+  <div class="login">
+    <h1>Login</h1>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <label>Email:</label>
+      <input type="email" placeholder="Email..." formControlName="email" />
+      <label>Password:</label>
+      <input type="password" placeholder="Password..." formControlName="password" />
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    <p class="error-msg">{{externalErrorMsg}}</p>
+    <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
+  </div>
