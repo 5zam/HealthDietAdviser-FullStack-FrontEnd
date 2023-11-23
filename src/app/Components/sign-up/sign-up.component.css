@@ -1,0 +1,68 @@
+/* your-signup-component.component.css */
+.signup {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Center vertically within the viewport */
+  }
+  
+  .signup-title {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .signup-button {
+    width: 100%;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+  }
+  
+  /* YourComponent.css */
+.login-link {
+    margin-top: 0px; /* Adjust the margin as needed */
+  }
+  
+  .login-link a {
+    text-decoration: none; /* Remove the default underline on the link */
+    color: #007bff; /* Set the link color */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+  
+    /* Apply hover effect */
+    &:hover {
+      color: #0056b3; /* Change the color on hover */
+      cursor: pointer; /* Change the cursor to a pointer on hover */
+    }
+  }
+  
+
+  
+
+  /* YourComponent.css */
+.signup-button {
+    background-color: #007bff; /* Set the default button background color */
+    color: #fff; /* Set the default button text color */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition for color changes */
+  
+    /* Apply hover effect */
+    &:hover {
+      background-color: #0056b3; /* Change the background color on hover */
+      color: #fff; /* Change the text color to white on hover */
+      cursor: pointer; /* Change the cursor to a pointer on hover */
+    }
+  
+    /* Apply disabled styles */
+    &:disabled {
+      background-color: #ccc; /* Change the background color when the button is disabled */
+      color: #000; /* Change the text color when the button is disabled */
+    }
+  }
+  

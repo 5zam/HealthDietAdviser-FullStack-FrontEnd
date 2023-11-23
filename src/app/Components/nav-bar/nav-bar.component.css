@@ -1,0 +1,35 @@
+.center-content {
+    display: flex;
+    justify-content: center; /* Horizontally center-align the content */
+    align-items: center; /* Vertically center-align the content */
+  }
+
+  /* nav-bar.component.css */
+.navbar {
+  background-color: #1976D2; /* Change to your desired background color */
+  color: white; /* Text color for links and buttons */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px; /* Adjust the spacing between links */
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style the logo as needed */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px; /* Adjust spacing between logo and links */
+}
+
+/* Add margin to the right of the last link */
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Adjust padding and margins as needed */

@@ -1,15 +1,26 @@
 
 
 
-<h1>Chronic Diseases</h1>
-<!-- <form (ngSubmit)="displayChronicDisease()" [formGroup]="displayChronicDiseaseForm"></form> -->
-<ul>
-  <li *ngFor="let disease of diseases">
-    {{ disease.diseaseName }}
-    <button (click)="deleteDisease(disease.diseaseId)">Delete</button>
-    <button [routerLink]="['/meals/add', disease.diseaseId]">Add Meal</button>
-  </li>
-</ul>
+<h1 class="mat-display-2 section-title center">Chronic Diseases</h1>
+
+
+<!-- Add a Material card to wrap the list -->
+<mat-card class="disease-list-card">
+  <mat-card-content>
+    <ul class="disease-list">
+      <li *ngFor="let disease of diseases">
+        {{ disease.diseaseName }}
+        <button mat-icon-button color="warn" (click)="deleteDisease(disease.diseaseId)"  class="delete-button">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" [routerLink]="['/meals/add', disease.diseaseId]">
+          Add Meal
+        </button>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+
 
 <!-- <mat-tab-group>
   <mat-tab label="Search Diseases">

@@ -1,0 +1,42 @@
+.disease-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px; /* Adjust the gap between the input and button as needed */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Add color to the button */
+  .mat-raised-button {
+    background-color: #007acc; /* You can change this color to your preference */
+    color: white; /* Text color */
+  }
+
+  
+
+  /* Center-align the text input within the button */
+button {
+    width: 100%;
+    background-color:blue; /* Replace with your desired color */
+    border: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+  }
+  
+  /* Remove default input styles and add some padding */
+  input {
+    border: none;
+    padding: 10px;
+    background-color: transparent; /* Make the input transparent */
+    color: black; /* Replace with your desired color */
+    width: 100%;
+  }
+  

@@ -1,0 +1,130 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.user-dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .disease-select {
+    width: 100%;
+  }
+  
+  .selected-diseases {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .selected-diseases li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .mat-icon-button {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .mat-raised-button {
+    font-size: 14px;
+    height: 32px;
+    padding: 0 16px;
+    margin-right: 8px; /* Add margin between buttons */
+  }
+  
+  /* Optional: Add margin to the list items for better spacing */
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* user-dashboard.component.css */
+
+.user-dashboard {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-dashboard h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.disease-select {
+  margin-bottom: 20px;
+}
+
+.available-meals {
+  list-style: none;
+  padding: 0;
+}
+
+.available-meals li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.available-meals li p {
+  margin: 5px 0;
+}
+
+.selected-diseases {
+  list-style: none;
+  padding: 0;
+}
+
+.selected-diseases li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected-diseases button {
+  margin-left: 10px;
+}
+
+.custom-select-panel {
+  margin-top: -10px; /* Adjust this value to move the dropdown closer to the arrow */
+}
+
+.mat-select-trigger {
+  padding: 0 8px; /* Adjust the left padding to move the dropdown closer to the arrow */
+}
+
+.user-dashboard {
+  /* Your existing styles here */
+}
+
+/* Circular button styles */
+.mat-icon-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px; /* Add some spacing between buttons */
+  background-color: red; /* Set the button background color */
+  color: white; /* Set the icon color */
+}
+
+/* Adjust button size and colors as needed */
+.mat-raised-button {
+  height: 36px;
+  margin-right: 8px; /* Add some spacing between buttons */
+}
+
+/* Optional: Add margin to the list items for better spacing */
+ul li {
+  margin-bottom: 8px;
+}

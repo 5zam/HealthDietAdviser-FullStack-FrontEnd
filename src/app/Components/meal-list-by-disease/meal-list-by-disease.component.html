@@ -1,0 +1,34 @@
+<h1 *ngIf="diseaseId == null">Meals for Disease {{ diseaseId }}</h1>
+
+<!-- <mat-card class="meal-list-card">
+  <mat-card-content>
+    <ul class="meal-list">
+      <li *ngFor="let meal of meals">
+        {{ meal.name }} - {{ meal.type }} - Calories: {{ meal.calories }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card> -->
+
+<mat-card class="meal-list-card">
+  <mat-card-content>
+    <ul class="meal-list">
+      <li *ngFor="let meal of meals">
+        {{ meal.name }} - {{ meal.type }} - Calories: {{ meal.calories }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+
+<!-- 
+<ng-container *ngFor="let meal of meals">
+  <div class="meal-card">
+    <h2>{{ meal.name }}</h2>
+    <p>Type: {{ meal.type }}</p>
+    <p>Calories: {{ meal.calories }}</p>
+    <p>Protein: {{ meal.protein }}</p>
+    <p><img [src]="meal.mealImagePath" alt="{{ meal.name }}" /></p>
+   
+  </div>
+</ng-container> -->
+

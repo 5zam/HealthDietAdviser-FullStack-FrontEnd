@@ -124,3 +124,52 @@ nav ul li {
   flex-direction: column;
   align-items: center;
 }
+
+.highlighted-text {
+  color: #007bff; /* Set the color to a highlighted shade, e.g., blue */
+  font-weight: bold; /* Make the text bold */
+  /* Add any other styling you prefer */
+}
+
+
+/* CSS Styles for Headings */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Change the color as needed */
+  margin-bottom: 16px;
+}
+
+/* CSS Styles for Paragraphs */
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666; /* Change the color as needed */
+  margin-bottom: 24px;
+}
+
+/* Highlighted Text */
+.highlight-text {
+  color: #FF5733; /* Change the highlight color as needed */
+  font-weight: bold;
+}
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif; /* Change to your desired font */
+  background-color: #f5f5f5; /* Change to your desired background color */
+}
+
+/* Apply common styles to buttons */
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Style form fields as needed */
+mat-form-field {
+  width: 100%;
+}
+
+/* Add more global styles as needed */

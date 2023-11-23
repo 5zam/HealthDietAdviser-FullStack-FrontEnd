@@ -1,30 +1,47 @@
-<h1>Add Meal for Disease (ID: {{ diseaseId }})</h1>
+<app-header></app-header>
+<h1 class="section-title hidden">Add Meal for Disease (ID: {{ diseaseId }})</h1>
 
-<form (submit)="addMeal()">
-  <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" [(ngModel)]="meal.name" required>
+<form class="meal-form" (submit)="addMeal()">
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Name:</mat-label>
+      <input matInput type="text" [(ngModel)]="meal.name" name="name" required placeholder="Enter meal name">
+    </mat-form-field>
   </div>
   
-  <div>
-    <label for="type">Type:</label>
-    <input type="text" id="type" name="type" [(ngModel)]="meal.type" required>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Type:</mat-label>
+      <input matInput type="text" [(ngModel)]="meal.type" name="type" required placeholder="Enter meal type">
+    </mat-form-field>
   </div>
   
-  <div>
-    <label for="mealImagePath">Image Path:</label>
-    <input type="text" id="mealImagePath" name="mealImagePath" [(ngModel)]="meal.mealImagePath" required>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Image Path:</mat-label>
+      <input matInput type="text" [(ngModel)]="meal.mealImagePath" name="mealImagePath" required placeholder="Enter image path">
+    </mat-form-field>
   </div>
   
-  <div>
-    <label for="calories">Calories:</label>
-    <input type="number" id="calories" name="calories" [(ngModel)]="meal.calories" required>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Calories:</mat-label>
+      <input matInput type="number" [(ngModel)]="meal.calories" name="calories" required placeholder="Enter calories">
+    </mat-form-field>
   </div>
   
-  <div>
-    <label for="protein">Protein:</label>
-    <input type="number" id="protein" name="protein" [(ngModel)]="meal.protein" required>
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Protein:</mat-label>
+      <input matInput type="number" [(ngModel)]="meal.protein" name="protein" required placeholder="Enter protein">
+    </mat-form-field>
   </div>
 
-  <button type="submit">Add Meal</button>
+  <button mat-raised-button color="primary" type="submit">Add Meal</button>
 </form>
+
+<!-- <app-meal-list></app-meal-list> -->
+
+<!-- <app-meal-list-by-disease [diseaseId]=diseaseId></app-meal-list-by-disease> -->
+<app-meals-for-disease></app-meals-for-disease>
+<!-- <app-footer></app-footer> -->

@@ -8,11 +8,11 @@
 </div> -->
 
 <mat-toolbar color="primary">
-    <div>
-      <a mat-button [routerLink]="['/']">Home</a>
-      <a mat-button [routerLink]="['/who-we-are']">Who we are</a>
-      <a mat-button [routerLink]="['/diseases']">Chronic Diseases</a>
-      <span class="spacer"></span>
-      <a mat-button (click)="logout()">Logout</a>
-    </div>
-  </mat-toolbar>
+  <div class="center-content">
+    <a mat-button [routerLink]="['/']">Home</a>
+    <a mat-button [routerLink]="['/who-we-are']">Who we are</a>
+    <a mat-button [routerLink]="['/diseases']">Chronic Diseases</a>
+    <span class="spacer"></span>
+    <a mat-button (click)="logout()">Logout</a>
+  </div>
+</mat-toolbar>

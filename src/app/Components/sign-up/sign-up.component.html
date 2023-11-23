@@ -1,15 +1,32 @@
+
+<app-nav-bar></app-nav-bar>
+<app-header></app-header>
+
+<!-- your-signup-component.component.html -->
 <div class="signup">
-    <h1>Sign Up</h1>
+    <h1 class="mat-display-2 signup-title">Sign Up</h1>
   
-    <form (ngSubmit)="signup()" [formGroup]="registerForm">
-        <label>Name:</label>
-        <input type="text" placeholder="Name..." formControlName="name" />
-        <label>Email:</label>
-        <input type="email" placeholder="Email..." formControlName="email" />
-        <label>Password:</label>
-        <input type="password" placeholder="Password..." formControlName="password" />
-        <button type="submit" [disabled]="registerForm.invalid">Sign Up</button>
+    <form (ngSubmit)="signup()" [formGroup]="registerForm" class="signup-form">
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Name:</mat-label>
+        <input matInput type="text" placeholder="Name..." formControlName="name" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Email:</mat-label>
+        <input matInput type="email" placeholder="Email..." formControlName="email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Password:</mat-label>
+        <input matInput type="password" placeholder="Password..." formControlName="password" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid" class="signup-button">Sign Up</button>
     </form>
   
-    <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+    <p class="login-link">Already have an account? <a mat-button [routerLink]="['/login']">Login</a></p>
+
+    <br>
+    <app-footer></app-footer>
   </div>
+  
+
+  

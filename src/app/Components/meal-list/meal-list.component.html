@@ -1,0 +1,41 @@
+<p>meal-list works!</p>
+<!-- <h2>Meals List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Image Path</th>
+      <th>Calories</th>
+      <th>Protein</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let meal of meals">
+      <td>{{ meal.name }}</td>
+      <td>{{ meal.type }}</td>
+      <td>{{ meal.mealImagePath }}</td>
+      <td>{{ meal.calories }}</td>
+      <td>{{ meal.protein }}</td>
+      <td>
+        <button (click)="navigateToUpdate(meal.mealId)">Update</button>
+        <button (click)="deleteMeal(meal.mealId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<h1 *ngIf="diseaseId == null">Meals for Disease {{ diseaseId }}</h1>
+
+<mat-card class="meal-list-card">
+  <mat-card-content>
+    <ul class="meal-list">
+      <li *ngFor="let meal of meals">
+        {{ meal.name }} - {{ meal.type }} - Calories: {{ meal.calories }}
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

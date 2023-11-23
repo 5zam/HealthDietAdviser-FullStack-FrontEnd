@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +31,16 @@ import { AddMealForDiseaseComponent } from './Components/add-meal-for-disease/ad
 import { MatTabsModule } from '@angular/material/tabs';
 import { UserDashboardComponent } from './Components/user-dashboard/user-dashboard.component';
 import { DietPrescriptionComponent } from './Components/diet-prescription/diet-prescription.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { MealListComponent } from './Components/meal-list/meal-list.component';
+import { UpdateMealComponent } from './Components/update-meal/update-meal.component';
+import { MealListByDiseaseComponent } from './Components/meal-list-by-disease/meal-list-by-disease.component';
+import { MealsForDiseaseComponent } from './Components/meals-for-disease/meals-for-disease.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +54,17 @@ import { DietPrescriptionComponent } from './Components/diet-prescription/diet-p
     DeleteChronicDiseaseComponent,
     AddMealForDiseaseComponent,
     UserDashboardComponent,
-    DietPrescriptionComponent
+    DietPrescriptionComponent,
+    FooterComponent,
+    HeaderComponent,
+    NotFoundComponent,
+    MealListComponent,
+    UpdateMealComponent,
+    MealListByDiseaseComponent,
+    MealsForDiseaseComponent,
+
+  
+
    
     
   ],
@@ -46,11 +74,19 @@ import { DietPrescriptionComponent } from './Components/diet-prescription/diet-p
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     MatTabsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatListModule,
+    MatIconModule,
+    MatDividerModule,
+    MatCardModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,58 +1,25 @@
-<!-- <div class="login">
-    <h1>Login</h1>
 
-    <form (ngSubmit)="login()" [formGroup]="loginForm">
-        <label>Email:</label>
-        <input type="email" placeholder="Email..." formControlName="email" />
-        <label>Password:</label>
-        <input type="password" placeholder="Password..." formControlName="password" />
-        <button type="submit" [disabled]="loginForm.invalid">Login</button>
-    </form>
-    <p class="error-msg">{{externalErrorMsg}}</p>
-
-    <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
-</div> -->
-
-<!-- <div class="app-container">
-    <app-nav-bar></app-nav-bar>
-    <header>
-        <div class="header-logo">
-          <img src="../../../assets/image/diet-health-advisor-logo.png" alt="Diet Health Advisor Logo" class="logo-image" />
-          <h3 class="title">Diet Health Advisor</h3>
-        </div>
-      </header>
-    <div class="login">
-   
-  
-      <h1>Login</h1>
-  
-      <form (ngSubmit)="login()" [formGroup]="loginForm">
-        <label>Email:</label>
-        <input type="email" placeholder="Email..." formControlName="email" />
-        <label>Password:</label>
-        <input type="password" placeholder="Password..." formControlName="password" />
-        <button type="submit" [disabled]="loginForm.invalid">Login</button>
-      </form>
-      <p class="error-msg">{{externalErrorMsg}}</p>
-  
-      <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
-    </div>
-  </div> -->
-
+  <app-nav-bar></app-nav-bar>
+  <app-header></app-header>
   
 
+<div class="login">
+  <h1 class="mat-display-2 login-title">Login</h1>
+  <form (ngSubmit)="login()" [formGroup]="loginForm" class="login-form">
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Email:</mat-label>
+      <input matInput type="email" placeholder="Email..." formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Password:</mat-label>
+      <input matInput type="password" placeholder="Password..." formControlName="password" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" class="login-button">Login</button>
+  </form>
+  <p class="error-msg">{{ externalErrorMsg }}</p>
+  <p class="signup-link">Don't have an account? <a mat-button [routerLink]="['/signup']">Create new account</a></p>
+</div>
 
 
-  
-  <div class="login">
-    <h1>Login</h1>
-    <form (ngSubmit)="login()" [formGroup]="loginForm">
-      <label>Email:</label>
-      <input type="email" placeholder="Email..." formControlName="email" />
-      <label>Password:</label>
-      <input type="password" placeholder="Password..." formControlName="password" />
-      <button type="submit" [disabled]="loginForm.invalid">Login</button>
-    </form>
-    <p class="error-msg">{{externalErrorMsg}}</p>
-    <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
-  </div>
+<br>
+  <app-footer></app-footer>
